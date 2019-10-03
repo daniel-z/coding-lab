@@ -1,0 +1,39 @@
+
+$black: #000;
+$white: #fff;
+$gray-alpha: #b9b9b9;
+
+$code-card-height: 300px;
+$code-card-bgcolor: $black;
+$code-card-fcolor: $white;
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.code-cards {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border: 1px solid $gray-alpha;
+  max-width: 1024px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.code-card {
+  min-width: 200px;
+  padding: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: $code-card-bgcolor;
+  height: $code-card-height;
+  box-shadow: 1px 1px 1px $gray-alpha;
+  color: $code-card-fcolor;
+
+  &__back {
+    display: none;
+  }
+}
