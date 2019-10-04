@@ -8,19 +8,23 @@
     </p>
   </section>
   <div class="main-content">
-    <section class="code-cards">
-      <div class="code-card" v-for="(code, index) in codeExperiments" v-bind:key="index">
-        <h4>{{ code.name }}</h4>
-        <dl class="code-card__back">
-          <dt class="code-card__name">{{ code.name }}</dt>
-          <dd class="code-card__description">
-            <a href="{{code.repoUrl}"> Github Repo </a>
-            <p>{{ code.description }}</p>
-            <ul>
-              <li v-for="(tag, index) in code.tags" v-bind:key="index">{{ tag }}</li>
-            </ul>
-          </dd>
-        </dl>
+    <section class="experiment-cards">
+      <div class="card-container" v-for="(code, index) in codeExperiments" v-bind:key="index">
+        <div class="card">
+          <div class="card__front">
+            <h4>{{ code.name }}</h4>
+          </div>
+          <div class="card__back">
+            <span class="card__name">{{ code.name }}</span>
+            <div class="card__description">
+              <a href="{{code.repoUrl}"> Github Repo </a>
+              <p>{{ code.description }}</p>
+              <ul>
+                <li v-for="(tag, index) in code.tags" v-bind:key="index">{{ tag }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
