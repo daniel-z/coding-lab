@@ -4,27 +4,24 @@
   </header>
   <section class="home-page__intro">
     <p>
-      These are some code experiments that I made to learn technologies I was
-      interested in.
+      These are some code experiments that I made to learn technologies I was interested in.
     </p>
   </section>
   <div class="main-content">
-
-  <section class="code-cards">
-    <div class="code-card" v-for="(code, index) in codeExperiments" v-bind:key="index">
-      <h4>{{code.name}}</h4>
-      <dl class="code-card__back">
-        <dt class="code-card__name">{{code.name}}</dt>
-        <dd class="code-card__description">
-          <a href="{{code.repoUrl}"> Github Repo </a>
-          <p>{{code.description}}</p>
-          <ul>
-            <li v-for="(tag, index) in code.tags" v-bind:key="index">{{tag}}</li>
-          </ul>
-        </dd>
-      </dl>
-    </div>
-  </section>
-
+    <section class="code-cards">
+      <div class="code-card" v-for="(code, index) in codeExperiments" v-bind:key="index">
+        <h4>{{ code.name }}</h4>
+        <dl class="code-card__back">
+          <dt class="code-card__name">{{ code.name }}</dt>
+          <dd class="code-card__description">
+            <a href="{{code.repoUrl}"> Github Repo </a>
+            <p>{{ code.description }}</p>
+            <ul>
+              <li v-for="(tag, index) in code.tags" v-bind:key="index">{{ tag }}</li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </section>
   </div>
 </div>

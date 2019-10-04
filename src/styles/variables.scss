@@ -1,0 +1,34 @@
+// colors
+$black: #000;
+$white: #fff;
+$gray-alpha: #b9b9b9;
+
+// Font Sizes
+$font-size-xsmall: 14px;
+$font-size-small: 16px;
+$font-size-medium: 18px;
+$font-size-large: 22px;
+$font-size-xlarge: 34px;
+$font-size-xxlarge: 40px;
+$font-size-xxxlarge: 52px;
+
+// fonts
+$primary-ffamily: "Avenir", Helvetica, Arial, sans-serif;
+$secondary-ffamily: "LibreBaskerville", times;
+$secondary-ffamily-bold: "LibreBaskerville-Bold", times;
+$secondary-ffamily-italic: "LibreBaskerville-Italic", times;
+
+@font-face {
+  font-family: "LibreBaskerville";
+  src: url("/assets/fonts/LibreBaskerville/LibreBaskerville-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "LibreBaskerville-Italic";
+  src: url("/assets/fonts/LibreBaskerville/LibreBaskerville-Italic.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "LibreBaskerville-Bold";
+  src: url("/assets/fonts/LibreBaskerville/LibreBaskerville-Bold.ttf") format("ttf");
+}

@@ -1,39 +1,93 @@
-
-$black: #000;
-$white: #fff;
-$gray-alpha: #b9b9b9;
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+@import "@/styles/media-queries.scss";
 
 $code-card-height: 300px;
 $code-card-bgcolor: $black;
 $code-card-fcolor: $white;
 
 .main-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flx-center();
 }
 
-.code-cards {
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  border: 1px solid $gray-alpha;
-  max-width: 1024px;
-  justify-content: center;
-  align-items: stretch;
-}
+.home-page {
+  padding-top: 50px;
 
-.code-card {
-  min-width: 200px;
-  padding: 10px;
-  padding: 10px;
-  margin: 10px;
-  background-color: $code-card-bgcolor;
-  height: $code-card-height;
-  box-shadow: 1px 1px 1px $gray-alpha;
-  color: $code-card-fcolor;
+  h1 {
+    text-align: center;
+    width: 100%;
+  }
 
-  &__back {
-    display: none;
+  &__intro {
+    font-family: $secondary-ffamily;
+    margin-bottom: 40px;
+  }
+
+  .code-cards {
+    border: 1px solid $gray-alpha;
+    display: flex;
+    flex-flow: row wrap;
+    width: 85%;
+    width: 280px;
+    min-width: 280px;
+    justify-content: flex-start;
+    max-width: 800px;
+
+    @include small-up {
+      width: 80%;
+    }
+
+    @include large-up {
+      justify-content: start;
+    }
+  }
+
+  .code-card {
+    background-color: $code-card-bgcolor;
+    height: $code-card-height;
+    box-shadow: 1px 1px 1px $gray-alpha;
+    color: $code-card-fcolor;
+
+    margin: 2% 0 1% 0;
+    width: 100%;
+    max-width: 280px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include small-up {
+      margin: 2% 1%;
+      width: 48%;
+
+      &:first-child {
+        margin-top: 2%;
+      }
+
+      &:last-child {
+        margin-top: 2%;
+      }
+    }
+
+    @include medium-up {
+      margin: 3% 1.5%;
+      width: 30%;
+
+      &:first-child {
+        margin-top: 3%;
+      }
+
+      &:last-child {
+        margin-top: 3%;
+      }
+    }
+
+    &__back {
+      display: none;
+    }
   }
 }
