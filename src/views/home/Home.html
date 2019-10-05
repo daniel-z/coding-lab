@@ -1,28 +1,32 @@
 <div class="home-page page">
-  <header>
-    <h1>Code Experiments</h1>
-  </header>
-  <section class="home-page__intro">
-    <p>
-      These are some code experiments that I made to learn technologies I was interested in.
-    </p>
+  <section class="home-page__header">
+    <header>
+      <h1>Code Experiments</h1>
+      <h2>By Daniel Zamorano</h2>
+    </header>
   </section>
+
   <div class="main-content">
-    <section class="experiment-cards">
-      <div class="card-container" v-for="(code, index) in codeExperiments" v-bind:key="index">
-        <div class="card">
-          <div class="card__front">
-            <h4>{{ code.name }}</h4>
-          </div>
-          <div class="card__back">
-            <span class="card__name">{{ code.name }}</span>
-            <div class="card__description">
-              <a href="{{code.repoUrl}"> Github Repo </a>
-              <p>{{ code.description }}</p>
-              <ul>
-                <li v-for="(tag, index) in code.tags" v-bind:key="index">{{ tag }}</li>
-              </ul>
-            </div>
+    <section class="home-page__intro">
+      <p>
+        These are some code experiments that I made to learn technologies I was interested in.
+      </p>
+    </section>
+
+    <section class="code-experiments">
+      <div
+        class="experiment-container theme-light"
+        v-for="(code, index) in codeExperiments"
+        v-bind:key="index"
+      >
+        <div class="experiment">
+          <h4 class="experiment__name">{{ code.name }}</h4>
+          <div class="experiment__description">
+            <a href="{{code.repoUrl}"> Github Repo </a>
+            <p>{{ code.description }}</p>
+            <ul>
+              <li v-for="(tag, index) in code.tags" v-bind:key="index">{{ tag }}</li>
+            </ul>
           </div>
         </div>
       </div>
