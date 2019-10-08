@@ -1,8 +1,10 @@
 <div class="home-page page">
   <div class="main-content">
     <section class="home-page__intro">
+      <h3>Experimenting new technologies and tools</h3>
       <p>
-        These are some code experiments that I made to learn technologies I was interested in.
+        I prefer to learn by doing. This is a curated collection of my code experiments, nothing
+        impressive, just a practical way to learn new technologies and practice.
       </p>
     </section>
 
@@ -13,9 +15,13 @@
         v-bind:key="index"
       >
         <div class="experiment">
-          <h4 class="experiment__name">{{ code.name }}</h4>
-          <div class="experiment__description">
-            <a href="{{code.repoUrl}"> Github Repo </a>
+          <h4 class="name">{{ code.name }}</h4>
+          <div class="image" v-bind:style="code.imageStyle"></div>
+          <div class="links">
+            <a class="code" href="{{code.previewUrl}"> Preview </a>
+            <a class="preview" href="{{code.repoUrl}"> See code </a>
+          </div>
+          <div class="description">
             <p>{{ code.description }}</p>
             <ul>
               <li v-for="(tag, index) in code.tags" v-bind:key="index">{{ tag }}</li>
