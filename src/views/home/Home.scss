@@ -54,11 +54,12 @@ $code-card-bordcolor-dark: $black;
 }
 
 .experiment-container {
-  width: 100%;
+  width: 90%;
   margin: 3% 0;
   padding: 1%;
   display: flex;
   flex-flow: row wrap;
+  overflow: hidden;
 
   &:last-child {
     margin-bottom: 0;
@@ -66,13 +67,10 @@ $code-card-bordcolor-dark: $black;
 
   @include small-up {
     margin: 3% 0;
-    width: 50%;
+    width: 48%;
   }
 
   @include medium-up {
-    margin: 3%;
-    width: 50%;
-
     &:first-child {
       margin-top: 3%;
     }
@@ -85,6 +83,7 @@ $code-card-bordcolor-dark: $black;
 
   .experiment {
     height: 100%;
+    width: 100%;
     text-align: left;
 
     .name {
@@ -102,7 +101,7 @@ $code-card-bordcolor-dark: $black;
     }
 
     .links {
-      text-align: right;
+      text-align: center;
       margin: 10px 0;
       display: flex;
       flex-flow: row wrap;
@@ -142,9 +141,11 @@ $code-card-bordcolor-dark: $black;
       }
 
       li {
+        flex: 1;
         padding: 2px 10px;
         margin: 0 3px;
         background-color: $gray-alpha;
+        text-align: center;
 
         &:first-child {
           margin-left: 0;
