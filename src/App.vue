@@ -13,6 +13,13 @@
       </div>
     </div>
     <router-view />
+    <footer>
+      <p class="about">
+        <a target="_blank" href="https://www.danielzamorano.pro">
+          Daniel Zamorano / 2019
+        </a>
+      </p>
+    </footer>
   </div>
 </template>
 

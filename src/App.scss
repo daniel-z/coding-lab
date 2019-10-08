@@ -54,6 +54,17 @@ h6 {
   margin: 5px 0;
 }
 
+a {
+  text-decoration: none;
+  color: $gray-beta;
+  padding: 5px 10px;
+
+  &:hover {
+    color: $black;
+    border-bottom: 1px solid $black;
+  }
+}
+
 html,
 body {
   width: 100%;
@@ -72,27 +83,16 @@ $main-bg-image: url("./assets/backgrounds/hero1.jpg");
   text-align: center;
   width: 100%;
   display: block;
-
-  &.theme-light {
-    background-color: $white;
-    color: $black;
-  }
-
-  &.theme-dark {
-    background-color: $black;
-    color: $white;
-  }
+  background-color: $white;
+  color: $black;
 
   .hero {
     background-image: $main-bg-image;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    width: 100vw;
-  }
-
-  .hero {
     display: block;
+    width: 100vw;
     height: 100vh;
     @include flx-center();
     flex-flow: column wrap;
@@ -146,6 +146,22 @@ $main-bg-image: url("./assets/backgrounds/hero1.jpg");
 
       @include large-up {
         font-size: 2vw;
+      }
+    }
+  }
+
+  footer {
+    background-color: $black;
+    padding: 10px 10px 20px 10px;
+    text-align: center;
+
+    a {
+      font-size: $font-size-small;
+      text-transform: uppercase;
+      color: $white;
+
+      &:hover {
+        color: $yellow;
       }
     }
   }
