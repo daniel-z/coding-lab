@@ -1,8 +1,12 @@
 // colors
 $black: #000;
 $white: #fff;
-$gray-alpha: #b9b9b9;
 $yellow: #ffff00;
+
+$gray-alpha: #d3d3d3;
+$gray-beta: #999;
+$gray-gama: #666;
+$gray-delta: #333;
 
 // Font Sizes
 $font-size-xsmall: 18px;
@@ -14,10 +18,12 @@ $font-size-xxlarge: 48px;
 $font-size-xxxlarge: 62px;
 
 // fonts
-$primary-ffamily: "Avenir", Helvetica, Arial, sans-serif;
-$secondary-ffamily: "LibreBaskerville", times;
-$secondary-ffamily-bold: "LibreBaskerville-Bold", times;
-$secondary-ffamily-italic: "LibreBaskerville-Italic", times;
+$primary-ffamily: "Playfair Display", serif;
+$body-ffamily: "LibreBaskerville", times;
+$body-ffamily-bold: "LibreBaskerville-Bold", times;
+$body-ffamily-italic: "LibreBaskerville-Italic", times;
+
+$bold-ffamily: "Anton", sans-serif;
 
 @font-face {
   font-family: "LibreBaskerville";

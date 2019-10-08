@@ -15,23 +15,6 @@ $code-card-bordcolor-dark: $black;
   @include flx-center();
   flex-flow: column wrap;
 
-  &__header {
-    h1 {
-      text-align: center;
-      width: 100%;
-      font-size: 12vw;
-      margin: 0;
-    }
-
-    h2 {
-      margin: 0;
-      font-family: $secondary-ffamily;
-      font-size: 6vw;
-      color: $gray-alpha;
-      margin-bottom: 15px;
-    }
-  }
-
   .main-content {
     @include flx-center();
     flex-flow: column wrap;
@@ -41,7 +24,7 @@ $code-card-bordcolor-dark: $black;
 
       p {
         text-align: justify;
-        font-family: $secondary-ffamily;
+        font-family: $body-ffamily;
         margin: 40px 0 0 0;
         font-size: 20px;
       }

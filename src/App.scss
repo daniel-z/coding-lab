@@ -1,4 +1,6 @@
 @import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+@import "@/styles/media-queries.scss";
 
 h1,
 h2,
@@ -9,6 +11,18 @@ h6 {
   line-height: 0.9;
   font-weight: normal;
   text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $primary-ffamily;
+}
+
+h4,
+h5,
+h6 {
+  font-family: $bold-ffamily;
 }
 
 h1 {
@@ -46,24 +60,93 @@ body {
   display: block;
   padding: 0;
   margin: 0;
-  font-family: $secondary-ffamily;
+  font-family: $body-ffamily;
 }
 
+$main-bg-image: url("./assets/backgrounds/hero1.jpg");
+
 #app {
-  font-family: $primary-ffamily;
+  font-family: $body-ffamily;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   width: 100%;
   display: block;
-}
 
-.theme-light {
-  background-color: $white;
-  color: $black;
-}
+  &.theme-light {
+    background-color: $white;
+    color: $black;
+  }
 
-.theme-dark {
-  background-color: $black;
-  color: $white;
+  &.theme-dark {
+    background-color: $black;
+    color: $white;
+  }
+
+  .hero {
+    background-image: $main-bg-image;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100vw;
+  }
+
+  .hero {
+    display: block;
+    height: 100vh;
+    @include flx-center();
+    flex-flow: column wrap;
+    box-shadow: 0 3px 12px $gray-gama;
+
+    .header-wrapper,
+    header {
+      width: 90vw;
+
+      @include medium-up {
+        width: 90vw;
+      }
+
+      @include xlarge-up {
+        width: 80vw;
+      }
+    }
+
+    .header-wrapper {
+      position: relative;
+    }
+
+    h1,
+    h2 {
+      background-color: $black;
+      margin: 0;
+      color: $white;
+      line-height: 1.4;
+    }
+
+    h1 {
+      text-align: center;
+      width: 100%;
+      font-size: 7vw;
+      padding-bottom: 8px;
+
+      @include large-up {
+        font-size: 7vw;
+      }
+
+      @include xlarge-up {
+        font-size: 5vw;
+      }
+    }
+
+    h2 {
+      margin: 10px 0 0 0;
+      font-family: $body-ffamily;
+      font-size: 4vw;
+      color: $gray-beta;
+
+      @include large-up {
+        font-size: 2vw;
+      }
+    }
+  }
 }
