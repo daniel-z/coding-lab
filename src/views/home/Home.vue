@@ -67,8 +67,8 @@ const codeExperiments = [
   {
     name: "CODE EXPERIEMENTS PAGE",
     links: {
-      code: "https://github.com/daniel-z/react-audition-ecommerce",
-      preview: "https://stackblitz.com/edit/react-audition-ecommerce"
+      code: "https://github.com/daniel-z/coding-lab",
+      preview: "/"
     },
     description:
       "I decided to add this here as I used it as a prototype to learn VueJS.",
