@@ -1,15 +1,68 @@
 @import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+@import "@/styles/media-queries.scss";
 
 h1,
 h2,
 h3,
 h4,
-h6,
+h5,
 h6 {
-  line-height: 1;
-  font-weight: 800;
+  line-height: 0.9;
+  font-weight: normal;
   text-transform: uppercase;
-  margin: 15px 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $primary-ffamily;
+}
+
+h4,
+h5,
+h6 {
+  font-family: $bold-ffamily;
+}
+
+h1 {
+  font-size: $font-size-xxxlarge;
+}
+
+h2 {
+  font-size: $font-size-xxlarge;
+  margin: 10px 0;
+}
+
+h3 {
+  font-size: $font-size-xlarge;
+  margin: 8px 0;
+}
+
+h4 {
+  font-size: $font-size-large;
+  margin: 5px 0;
+}
+
+h5 {
+  font-size: $font-size-large;
+  margin: 5px 0;
+}
+
+h6 {
+  font-size: $font-size-small;
+  margin: 5px 0;
+}
+
+a {
+  text-decoration: none;
+  color: $gray-beta;
+  padding: 5px 10px;
+
+  &:hover {
+    color: $black;
+    border-bottom: 1px solid $black;
+  }
 }
 
 html,
@@ -18,14 +71,98 @@ body {
   display: block;
   padding: 0;
   margin: 0;
+  font-family: $body-ffamily;
 }
 
+$main-bg-image: url("./assets/backgrounds/hero1.jpg");
+
 #app {
-  font-family: $primary-ffamily;
+  font-family: $body-ffamily;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   width: 100%;
   display: block;
+  background-color: $white;
+  color: $black;
+
+  .hero {
+    background-image: $main-bg-image;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    @include flx-center();
+    flex-flow: column wrap;
+    box-shadow: 0 3px 12px $gray-gama;
+
+    .header-wrapper,
+    header {
+      width: 90vw;
+
+      @include medium-up {
+        width: 90vw;
+      }
+
+      @include xlarge-up {
+        width: 80vw;
+      }
+    }
+
+    .header-wrapper {
+      position: relative;
+    }
+
+    h1,
+    h2 {
+      background-color: $black;
+      margin: 0;
+      color: $white;
+      line-height: 1.4;
+    }
+
+    h1 {
+      text-align: center;
+      width: 100%;
+      font-size: 7vw;
+      padding-bottom: 8px;
+
+      @include large-up {
+        font-size: 7vw;
+      }
+
+      @include xlarge-up {
+        font-size: 5vw;
+      }
+    }
+
+    h2 {
+      margin: 10px 0 0 0;
+      font-family: $body-ffamily;
+      font-size: 4vw;
+      color: $gray-beta;
+
+      @include large-up {
+        font-size: 2vw;
+      }
+    }
+  }
+
+  footer {
+    background-color: $black;
+    padding: 10px 10px 20px 10px;
+    text-align: center;
+
+    a {
+      font-size: $font-size-small;
+      text-transform: uppercase;
+      color: $white;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
 }
