@@ -4,10 +4,13 @@ node_js:
 cache: npm
 sudo: true
 addons:
-  chrome: stable
   ssh_known_hosts: 68.183.160.56
 before_script:
   - yarn global add @vue/cli
+before_install:
+  - openssl aes-256-cbc -K $encrypted_685a6b8a65b9_key -iv $encrypted_685a6b8a65b9_iv
+    -in deployuser.enc -out deployuser -d
+  - chmod 600 deployuser
 script:
   - npm run test:unit
   - npm run build
@@ -25,7 +28,3 @@ env:
     - GIT_EMAIL="travis@danielzamorano.pro"
     - GIT_COMMIT_MESSAGE="New Deploy"
     - DEPLOY_FOLDER="dist/"
-before_install:
-  - openssl aes-256-cbc -K $encrypted_685a6b8a65b9_key -iv $encrypted_685a6b8a65b9_iv
-    -in deployuser.enc -out deployuser -d
-  - chmod 600 deployuser
