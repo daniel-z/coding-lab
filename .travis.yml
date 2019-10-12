@@ -1,20 +1,20 @@
 language: node_js
 node_js:
-- 10.15.1
+  - 10.15.1
 cache: npm
 sudo: true
 addons:
   chrome: stable
   ssh_known_hosts: 68.183.160.56
 before_install:
-- openssl aes-256-cbc -K $encrypted_685a6b8a65b9_key -iv $encrypted_685a6b8a65b9_iv
-  -in deployuser.enc -out deployuser -d
-- chmod 600 deployuser
+  - openssl aes-256-cbc -K $encrypted_685a6b8a65b9_key -iv $encrypted_685a6b8a65b9_iv
+    -in deployuser.enc -out deployuser -d
+  - chmod 600 deployuser
 before_script:
-- yarn global add @vue/cli
+  - yarn global add @vue/cli
 script:
-- npm run test:unit
-- npm run build
+  - npm run test:unit
+  - npm run build
 deploy:
   skip_cleanup: true
   provider: script
@@ -23,9 +23,9 @@ deploy:
     branch: master
 env:
   global:
-  - KEY_PATH="./deployuser"
-  - REMOTE_REPO="deploy@68.183.160.56:/var/www/lab"
-  - GIT_USERNAME="Travis CI "
-  - GIT_EMAIL="travis@danielzamorano.pro"
-  - GIT_COMMIT_MESSAGE="New Deploy"
-  - DEPLOY_FOLDER="dist/"
+    - KEY_PATH="./deployuser"
+    - REMOTE_REPO="deploy@68.183.160.56:/var/www/lab"
+    - GIT_USERNAME="Travis CI "
+    - GIT_EMAIL="travis@danielzamorano.pro"
+    - GIT_COMMIT_MESSAGE="New Deploy"
+    - DEPLOY_FOLDER="dist/"
