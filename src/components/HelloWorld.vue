@@ -1,4 +1,8 @@
-<template></template>
+<template>
+  <div>
+    {{ msg }}
+  </div>
+</template>
 
 <script>
 export default {
@@ -9,5 +13,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
