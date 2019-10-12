@@ -8,7 +8,11 @@
       <div class="header-wrapper">
         <header>
           <h1>Code Experiments</h1>
-          <h2>By Daniel Zamorano</h2>
+          <h2>
+            <a target="_blank" href="https://www.danielzamorano.pro">
+              By Daniel Zamorano
+            </a>
+          </h2>
         </header>
       </div>
     </div>

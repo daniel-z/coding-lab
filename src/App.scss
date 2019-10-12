@@ -147,6 +147,14 @@ $main-bg-image: url("./assets/backgrounds/hero1.jpg");
       @include large-up {
         font-size: 2vw;
       }
+
+      a {
+        text-decoration: none;
+        border-bottom: 0;
+        &:hover {
+          color: $white;
+        }
+      }
     }
   }
 
