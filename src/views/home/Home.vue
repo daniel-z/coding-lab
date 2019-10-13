@@ -28,8 +28,8 @@ const codeExperiments = [
   {
     name: "Particles Tracker",
     links: {
-      code: "https://github.com/daniel-z/particles-pointer-tracker"
-      // preview: "https://github.com/daniel-z/particles-pointer-tracker"
+      code: "https://github.com/daniel-z/particles-pointer-tracker",
+      preview: "https://particles.danielzamorano.pro"
     },
     description:
       "2D animation using canvas and ES6, is a complete refactoring of a code sample I found in codepen.",
