@@ -16,13 +16,13 @@ h6 {
 h1,
 h2,
 h3 {
-  font-family: $primary-ffamily;
+  font-family: $title-ffamily;
 }
 
 h4,
 h5,
 h6 {
-  font-family: $bold-ffamily;
+  font-family: $subtitle-ffamily;
 }
 
 h1 {
@@ -65,6 +65,8 @@ a {
   }
 }
 
+$main-bg-image: url("./assets/backgrounds/bg-papers.jpg");
+
 html,
 body {
   width: 100%;
@@ -73,8 +75,6 @@ body {
   margin: 0;
   font-family: $body-ffamily;
 }
-
-$main-bg-image: url("./assets/backgrounds/hero1.jpg");
 
 #app {
   font-family: $body-ffamily;
@@ -91,12 +91,12 @@ $main-bg-image: url("./assets/backgrounds/hero1.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    display: block;
     width: 100vw;
     height: 100vh;
     @include flx-center();
     flex-flow: column wrap;
-    box-shadow: 0 3px 12px $gray-gama;
+    position: relative;
+    align-items: center;
 
     .header-wrapper,
     header {
@@ -113,49 +113,80 @@ $main-bg-image: url("./assets/backgrounds/hero1.jpg");
 
     .header-wrapper {
       position: relative;
-    }
 
-    h1,
-    h2 {
-      background-color: $black;
-      margin: 0;
-      color: $white;
-      line-height: 1.4;
-    }
+      h1,
+      h2 {
+        background-color: $black;
+        margin: 0;
+        color: $white;
+        line-height: 1.4;
+      }
 
-    h1 {
-      text-align: center;
-      width: 100%;
-      font-size: 7vw;
-      padding-bottom: 8px;
-
-      @include large-up {
+      h1 {
+        text-align: center;
+        width: 100%;
         font-size: 7vw;
+        padding-top: 13px;
+
+        @include large-up {
+          font-size: 7vw;
+        }
+
+        @include xlarge-up {
+          font-size: 5vw;
+        }
       }
 
-      @include xlarge-up {
-        font-size: 5vw;
-      }
-    }
+      h2 {
+        margin: 10px 0 0 0;
+        font-family: $body-ffamily;
+        font-size: 3vw;
+        color: $gray-beta;
 
-    h2 {
-      margin: 10px 0 0 0;
-      font-family: $body-ffamily;
-      font-size: 4vw;
-      color: $gray-beta;
+        @include large-up {
+          font-size: 2vw;
+        }
 
-      @include large-up {
-        font-size: 2vw;
-      }
-
-      a {
-        text-decoration: none;
-        border-bottom: 0;
-        &:hover {
-          color: $white;
+        a {
+          text-decoration: none;
+          border-bottom: 0;
+          &:hover {
+            color: $white;
+          }
         }
       }
     }
+
+    .scroll-legend {
+      left: 0;
+      display: block;
+      animation: blink 1s infinite;
+      font-size: 16px;
+      margin: 20px auto;
+      color: $black;
+      padding: 10px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+
+    @keyframes blink {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
+  header {
+    position: relative;
   }
 
   footer {

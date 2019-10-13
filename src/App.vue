@@ -1,3 +1,12 @@
+<script>
+import { ScrollToClass } from "./utils/utils";
+export default {
+  methods: {
+    clickToScroll: ScrollToClass
+  }
+};
+</script>
+
 <template>
   <div id="app">
     <!-- <div id="nav">
@@ -15,6 +24,9 @@
           </h2>
         </header>
       </div>
+      <a class="scroll-legend" v-on:click="clickToScroll('page')">
+        click to scroll
+      </a>
     </div>
     <router-view />
     <footer>

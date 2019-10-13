@@ -17,33 +17,27 @@
         v-bind:key="index"
       >
         <div class="experiment">
-          <div class="image" v-if="code.imageStyle" v-bind:style="code.imageStyle"></div>
+          <h4 class="title">{{ code.name }}</h4>
           <div class="content">
-            <h4 class="name">{{ code.name }}</h4>
             <div class="description">
               <p>{{ code.description }}</p>
               <ul>
                 <li v-for="(tag, index) in code.tags" v-bind:key="index">{{ tag }}</li>
               </ul>
             </div>
-            <div class="links">
-              <a
-                target="_blank"
-                v-if="code.links.preview"
-                class="code"
-                v-bind:href="code.links.preview"
-              >
-                Preview
-              </a>
-              <a
-                target="_blank"
-                v-if="code.links.code"
-                class="preview"
-                v-bind:href="code.links.code"
-              >
-                See code
-              </a>
-            </div>
+          </div>
+          <div class="links">
+            <a
+              target="_blank"
+              v-if="code.links.preview"
+              class="code"
+              v-bind:href="code.links.preview"
+            >
+              Preview
+            </a>
+            <a target="_blank" v-if="code.links.code" class="preview" v-bind:href="code.links.code">
+              See code
+            </a>
           </div>
         </div>
       </div>

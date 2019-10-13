@@ -36,7 +36,7 @@ const codeExperiments = [
     tags: ["ES6", "Webpack", "Babel", "Refactoring", "node", "npm", "Saas"]
   },
   {
-    name: "PHOTOS API",
+    name: "Photos Api",
     links: {
       code: "https://github.com/daniel-z/unsplash-api",
       preview: "https://photo.danielzamorano.pro"
@@ -55,7 +55,7 @@ const codeExperiments = [
     ]
   },
   {
-    name: "CONSOLE TYPER",
+    name: "Console Typer",
     links: {
       code: "",
       preview: "https://danielzamorano.pro/#/experience"
@@ -65,7 +65,7 @@ const codeExperiments = [
     tags: ["ES6", "Fun", "node", "yarn", "Webpack", "Babel"]
   },
   {
-    name: "CODE EXPERIEMENTS PAGE",
+    name: "Code Experiments Page",
     links: {
       code: "https://github.com/daniel-z/coding-lab",
       preview: "/"
@@ -75,7 +75,7 @@ const codeExperiments = [
     tags: ["Vue", "Saas"]
   },
   {
-    name: "ECOMMERCE SAMPLE",
+    name: "Ecommerce Sample",
     links: {
       code: "https://github.com/daniel-z/react-audition-ecommerce",
       preview: "https://stackblitz.com/edit/react-audition-ecommerce"

@@ -19,9 +19,10 @@ $font-size-xxlarge: 34px;
 $font-size-xxxlarge: 42px;
 
 // fonts
-$primary-ffamily: "Playfair Display", serif;
-$body-ffamily: "Rokkitt", serif;
-$bold-ffamily: "Anton", sans-serif;
+$title-ffamily: "Special Elite", cursive;
+$subtitle-ffamily: $title-ffamily;
+$body-ffamily: "Cutive Mono", monospace;
+$body-ffamily: "Anonymous Pro", monospace;
 
 @font-face {
   font-family: "LibreBaskerville";
