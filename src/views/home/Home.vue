@@ -57,8 +57,8 @@ const codeExperiments = [
   {
     name: "Console Typer",
     links: {
-      code: "",
-      preview: "https://danielzamorano.pro/#/experience"
+      code: "https://github.com/daniel-z/console-typer",
+      preview: "https://ctyper.danielzamorano.pro/"
     },
     description:
       "Funny util written using pure javascript to give a terminal typing effect to any paragraph.",
